@@ -1,0 +1,10 @@
+import UIKit
+
+let slowHorses = ["Alexander Whelan", "Ben Lamont", "Catherine Standish", "Charles Partner", "Claude Whelan", "Diana Taverner", "Emma Flyte", "Hassan Ahmed", "Ingrid Tearney", "Jackson Lamb", "Jed Moody", "J.K. Coe", "Jed Moody", "Lech Wicinski", "Louisa Guy", "Marcus Longridge", "Roddy Ho", "Nick Duffy", "Patricia Gaskell", "Peter Judd", "Peter Sparrow", "River Cartwright", "Roddy Ho", "Sean Donovan", "Shirley Dander", "Sidonie Baker"]
+
+let uniqueSlowHorses = Set(slowHorses)
+
+let numberOfSlowHorses = slowHorses.count
+let numberOfUniqueSlowHorses = uniqueSlowHorses.count
+
+print("Number of items: \(numberOfSlowHorses). Number of unique items: \(numberOfUniqueSlowHorses).")
