@@ -1,0 +1,14 @@
+import UIKit
+
+for i in 1...100{
+    if i.isMultiple(of: 3) && !i.isMultiple(of: 5){
+        print("Bizz")
+    } else if !i.isMultiple(of: 3) && i.isMultiple(of: 5){
+        print("Fuzz")
+    } else if i.isMultiple(of: 3) && i.isMultiple(of: 5){
+     print("FizzBuzz")
+    }
+    else{
+        print("\(i)")
+    }
+}
