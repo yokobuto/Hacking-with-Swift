@@ -1,0 +1,52 @@
+import Cocoa
+
+/*
+ 
+ To check your knowledge, here’s a small task for you: create a struct to store information about a car, including
+ 
+ its model,
+ number of seats,
+ and current gear,
+ then add a method to change gears up or down.
+ 
+ Have a think about variables and access control: what data should be a variable rather than a constant, and what data should be exposed publicly? Should the gear-changing method validate its input somehow?
+ 
+ */
+
+
+struct Car {
+    let model: String
+    let numberOfSeats: Int
+    let maxGear: Int
+    
+    private(set) var currentGear: Int = 0
+    
+    mutating func shiftUp(){
+        if currentGear <= maxGear{
+            self.currentGear += 1
+        } else{
+            self.currentGear = maxGear
+        }
+    }
+    
+    mutating func shiftDown(){
+        if currentGear >= 0{
+            self.currentGear -= 1
+        } else{
+            self.currentGear = 0
+        }
+    }
+  
+    
+    static let example = Car(model: "Golf", numberOfSeats: 5, maxGear: 6)
+    
+}
+
+var corolla = Car(model: "Corolla", numberOfSeats: 4, maxGear: 5)
+
+print(corolla.currentGear)
+corolla.shiftUp()
+print(corolla.currentGear)
+
+
+print(Car.example)
